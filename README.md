@@ -1,2 +1,8 @@
 # CS4999-Medical-Project
- NodeJS, Express, Truffle, Ganache, Metamask
+A Blockchain Medical Applicaion using:
+NodeJS, Express, Truffle, Ganache, Metamask
+
+To run:
+```javascript
+npm start
+```
