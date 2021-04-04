@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+</head>
+
+<body>
+    <div class="header">
+        <h1 style="text-align: center;">
+            <%= title %>
+        </h1>
+    </div>
+    <div>
+        <table style="margin: auto">
+            <tr>
+                <td>
+                    <form method="POST" action="/goto-patientlogin" class="inline">
+                        <div class="center">
+                            <input type="hidden">
+                            <button type="submit" class="link-button">
+                            Patient Login
+                        </button>
+                        </div>
+                    </form>
+                </td>
+                <td>
+                    <form method="POST" action="/goto-patientregister" class="inline">
+                        <div class="center">
+                            <input type="hidden">
+                            <button type="submit" class="link-button">
+                            Patient Register
+                        </button>
+                        </div>
+                    </form>
+                </td>
+                <td>
+                    <form method="POST" action="/goto-patientinterface" class="inline">
+                        <div class="center">
+                            <input type="hidden">
+                            <button type="submit" class="link-button">
+                            Patient Interface
+                        </button>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td>
+                    <form method="POST" action="/goto-doctorlogin" class="inline">
+                        <div class="center">
+                            <input type="hidden">
+                            <button type="submit" class="link-button">
+                            Doctor Login
+                        </button>
+                        </div>
+                    </form>
+                </td>
+                <td>
+                    <form method="POST" action="/goto-doctorregister" class="inline">
+                        <div class="center">
+                            <input type="hidden">
+                            <button type="submit" class="link-button">
+                            Doctor Register
+                        </button>
+                        </div>
+                    </form>
+                </td>
+                <td>
+                    <form method="POST" action="/goto-doctorinterface" class="inline">
+                        <div class="center">
+                            <input type="hidden">
+                            <button type="submit" class="link-button">
+                            Doctor Interface
+                        </button>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+        </table>
+        <div class="footer">
+            Virtual Healthcare using Blockchain and Edge Computing - CS 4999
+        </div>
+    </div>
+</body>
+
+</html>

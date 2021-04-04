@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>
+        <%= title %>
+    </title>
+
+    <!-- Bootstrap -->
+    <link href="./bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="/stylesheets/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+</head>
+
+<body>
+    <div class="header">
+        <h1>Patient Diagnosis</h1>
+    </div>
+
+    <div style="overflow: hidden">
+        <div class="menu">
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+        <div class="main">
+            <div class="section-header">
+                <table class="patient-info">
+                    <tr>
+                        <th>
+                            <h4 id="patient_name">Patient Name</h4>
+                        </th>
+                        <th>
+                            <h4 id="patient_medicare">Medicare Number</h4>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <h4 id="patient_sex">Patient Sex</h4>
+                        </th>
+                        <th>
+                            <h4 id="patient_dob">Patient Date of Birth</h4>
+                        </th>
+                    </tr>
+                </table>
+                <br><br>
+            </div>
+            <div class="section-main">
+                <main role="main" class="col-lg-12 d-flex justify-content-center">
+
+                    <div id="loader" class="text-center">
+                        <p class="text-center">Loading...</p>
+                    </div>
+                    <div id="content">
+                        <form onSubmit="App.createRecord();">
+                            <textarea id="diagnosis" type="text" class="form-control" rows="8" cols="45" placeholder="Enter Diagnosis..." required></textarea>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="right">
+            <table class="patient-list">
+                <th>Patient Name</th>
+                <th>Medicare Number</th>
+                <th>Sex</th>
+                <th>Date of Birth</th>
+                <% if(patientData.length!=0){ var i=1; patientData.forEach(function(data){ %>
+                    <tr class="patient-select" onclick="getRowData(this)">
+                        <td>
+                            <%=data.firstname %>
+                                <%=data.lastname %>
+                        </td>
+                        <td>
+                            <%=data.medicare %>
+                        </td>
+                        <td>
+                            <%=data.sex %>
+                        </td>
+                        <td>
+                            <%=data.dateofbirth %>
+                        </td>
+                    </tr>
+                    <% i++; }) %>
+                        <% } else { %>
+                            <tr>
+                                <td colspan="4 ">No Data Found</td>
+                            </tr>
+                            <% } %>
+            </table>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        Virtual Healthcare using Blockchain and Edge Computing - CS 4999
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./truffle-contract/dist/truffle-contract.js"></script>
+    <script src="/javascripts/app.js"></script>
+    <script id="__bs_script__">
+        //<![CDATA[
+        document.write("<script async src='http://HOST:3001/browser-sync/browser-sync-client.js?v=2.26.14'><\/script>".replace("HOST", location.hostname));
+        //]]>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <script language="javascript" type="text/javascript" src="/javascripts/script.js"></script>
+
+    <meta charset="utf-8">
+
+    <title>
+        <%= title %>
+    </title>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+</head>
+
+
+<body>
+    <div>
+        <div class="header">
+            <h1>
+                <%= title %>
+            </h1>
+            <table style="margin: auto">
+                <tr>
+                    <td>
+                        <h3 name="name">
+                            <%= name %>
+                        </h3>
+                    </td>
+                    <td>
+                        <h3>-</h3>
+                    </td>
+                    <td>
+                        <h3 name="medicare">
+                            <%= medicare %>
+                        </h3>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p style="text-align: center">Enter all applicable data:</p>
+            <table style="margin: auto">
+                <tr>
+                    <td><label for="heartrate">Heart Rate:</label></td>
+                    <td><input type="text" id="heartrate" /></td>
+                    <td><input type="datetime-local" id="heartrate" /></td>
+                </tr>
+                <tr>
+                    <td><label for="bloodpressure">Blood Pressure:</label></td>
+                    <td><input type="text" id="bloodpressure" /></td>
+                    <td><input type="datetime-local" id="bloodpressure" /></td>
+                </tr>
+                <tr>
+                    <td><label for="bloodoxygen">Blood Oxygen:</label></td>
+                    <td><input type="text" id="bloodoxygen" /></td>
+                    <td><input type="datetime-local" id="bloodoxygen" /></td>
+                </tr>
+                <tr>
+                    <td><label for="bloodsugar">Blood Sugar:</label></td>
+                    <td><input type="text" id="bloodsugar" /></td>
+                    <td><input type="datetime-local" id="bloodsugar" /></td>
+                </tr>
+                <tr>
+                    <td><label for="bodytemperature">Body Temperature:</label></td>
+                    <td><input type="text" id="bodytemperature" /></td>
+                    <td><input type="datetime-local" id="bodytemperature" /></td>
+                </tr>
+                <tr>
+                    <td><label for="respirationrate">Respriation Rate:</label></td>
+                    <td><input type="text" id="respirationrate" /></td>
+                    <td><input type="datetime-local" id="respirationrate" /></td>
+                </tr>
+            </table>
+            <br>
+            <div style="text-align: center">
+                <input type="submit" value="Submit" onclick="submitPatientData()" />
+            </div>
+        </div>
+        <div class="footer">
+            Virtual Healthcare using Blockchain and Edge Computing - CS 4999
+        </div>
+    </div>
+</body>
+
+</html>

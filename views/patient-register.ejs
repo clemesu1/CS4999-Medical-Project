@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <script language="javascript" type="text/javascript" src="/javascripts/script.js"></script>
+
+    <meta charset="utf-8" />
+
+    <title>
+        <%= title %>
+    </title>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+</head>
+
+<body>
+    <div>
+        <div class="header">
+            <h1>
+                <%= title %>
+            </h1>
+        </div>
+        <div>
+            <form method="POST" action="/patientregister">
+                <table style="margin: auto">
+                    <tr>
+                        <td><label for="medicare">Medicare Number:</label></td>
+                        <td><input type="number" id="medicare" name="medicare"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="firstname">First Name:</label></td>
+                        <td><input type="text" id="firstname" name="firstname"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lastname">Last Name:</label></td>
+                        <td><input type="text" id="lastname" name="lastname"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dateofbirth">Date of Birth:</label></td>
+                        <td><input type="date" id="dateofbirth" name="dateofbirth"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="sex">Sex:</label></td>
+                        <td>
+                            <select id="sex" name="sex">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <!-- <option value="Other">Other</option> -->
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">E-mail Address:</label></td>
+                        <td><input type="text" id="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">Phone Number:</label></td>
+                        <td><input type="text" id="phone" name="phone"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="province">Province:</label></td>
+                        <td>
+                            <select id="province" name="province">
+                                <option value="AB">Alberta</option>
+                                <option value="BC">British Columbia</option>
+                                <option value="MB">Manitoba</option>
+                                <option value="NB">New Brunswick</option>
+                                <option value="NL">Newfoundland and Labrador</option>
+                                <option value="NS">Nova Scotia</option>
+                                <option value="ON">Ontario</option>
+                                <option value="PE">Prince Edward Island</option>
+                                <option value="QC">Quebec</option>
+                                <option value="SK">Saskatchewan</option>
+                                <option value="NT">Northwest Territories</option>
+                                <option value="NU">Nunavut</option>
+                                <option value="YT">Yukon</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="city">City:</label></td>
+                        <td><input type="text" id="city" name="city"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address">Address:</label></td>
+                        <td><input type="text" id="address" name="address"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="postalcode">Postal Code:</label></td>
+                        <td><input type="text" id="postalcode" name="postalcode"></td>
+                    </tr>
+                </table>
+                <br>
+                <div style="text-align: center">
+                    <input type="submit" value="Register" />
+                </div>
+            </form>
+        </div>
+        <br>
+        <div class="center">
+            <form method="POST" action="/patient-login-redirect" class="inline">
+                <input type="hidden" name="login_redirect" value="login_redirect">
+                <button type="submit" name="login_redirect" value="Login" class="link-button">
+                    Already have an account?
+                </button>
+            </form>
+        </div>
+        <div class="footer">
+            Virtual Healthcare using Blockchain and Edge Computing - CS 4999
+        </div>
+    </div>
+</body>
+
+</html>
