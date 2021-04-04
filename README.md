@@ -5,7 +5,7 @@ A Blockchain Medical Application using:
 
 To run:
 
-1. Installing MetaMask:
+1. Install MetaMask:
 * To install MetaMask for Chrome, go to the [Chrome Web Store](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn) and click the Add to Chrome button.
 * To install MetaMask for FireFox, go to the [Firefox Add-ons page](https://addons.mozilla.org/en-US/firefox/addon/ether-metamask/) and click the Add to Firefox button.
 
