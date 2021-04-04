@@ -187,6 +187,10 @@ input[type=submit] {
     display: none;
 }
 
+main {
+    margin-top: 60px;
+}
+
 
 /* Clear floats after the columns */
 
