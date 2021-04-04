@@ -20,6 +20,6 @@ To run:
   npm install
   ```
 
-4. To run the Express server ```npm start```.
+4. To run the Express server ```npm start```
 
-5. In the browser window open ```http://localhost:3000/```.
+5. In the browser window open ```http://localhost:3000/```
