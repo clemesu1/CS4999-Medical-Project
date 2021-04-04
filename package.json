@@ -1,11 +1,12 @@
 {
-    "name": "project-final",
-    "version": "0.0.0",
+    "name": "cs4999-medical-project",
+    "version": "1.0.0",
+    "description": "Blockchain Medical Records Powered By Ethereum",
     "main": "truffle-config.js",
     "scripts": {
-        "start": "nodemon ./bin/www",
-        "dev": "lite-server"
+        "start": "nodemon ./bin/www"
     },
+    "author": "clemesu1@unb.ca",
     "devDependencies": {
         "body-parser": "^1.19.0",
         "bootstrap": "4.1.3",
