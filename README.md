@@ -4,5 +4,6 @@ NodeJS, Express, Truffle, Ganache, Metamask
 
 To run:
 ```javascript
+npm install
 npm start
 ```
