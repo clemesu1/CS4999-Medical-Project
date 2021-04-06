@@ -3,11 +3,9 @@
 /**
  * Module dependencies.
  */
-var browserSync = require('browser-sync').create();
 var app = require('../server');
 var debug = require('debug')('project-final:server');
 var http = require('http');
-
 
 if (app.get('env') === 'development') {
     var browserSync = require('browser-sync');
